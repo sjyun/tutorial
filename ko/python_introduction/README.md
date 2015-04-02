@@ -1,89 +1,86 @@
 # Introduction to Python
 
-> Part of this chapter is based on tutorials by Geek Girls Carrots (http://django.carrots.pl/).
+>이 챕터의 일부는 Geek Girls Carrots (http://django.carrots.pl/) 튜토리얼을 근간으로 하고 있어요.
 
-Let's write some code!
+자 이제 코드를 작성해볼까요 ^^
 
 ## Python prompt
+파이썬과 놀기 위해서, 우리는 여러분의 컴퓨터의 *command line* 을 열어야 해요.
 
-To start playing with Python, we need to open up a *command line* on your computer. You should already know how to do that -- you learned it in the [Intro to Command Line](../intro_to_command_line/README.md) chapter.
+ -- 이미 어떻게 하는 지 알고 계셔야 합니다.[Command Line 소개 챕터](../intro_to_command_line/README.md)에서 이미 배우셨으니까요.
 
-Once you're ready, follow the instructions below.
+준비가 되셨으면 아래의 설명대로 따라해보세요.
 
-We want to open up a Python console, so type in `python3` and hit Enter.
+파이썬 콘솔을 열기 원합니다. 그래서 우리는 python3라고 타이핑할꺼에요.
 
     $ python3
     Python 3.4.2 (...)
     Type "copyright", "credits" or "license" for more information.
     >>>
 
-## Your first Python command!
+## 두둥! 당신의 첫번째 파이썬 명령어
 
-After running the Python command, the prompt changed to `>>>`. For us this means that for now we may only use commands in the Python language. You don't have to type in `>>>` - Python will do that for you.
-
-If you want to exit the Python console at any point, just type `exit()` or use the shortcut `Ctrl + Z` for Windows and `Ctrl + D` for Mac/Linux. Then you won't see `>>>` any longer.
-
-But now, we don't want to exit the Python console. We want to learn more about it. Let's start with something really simple. For example, try typing some math, like `2 + 3` and hit Enter.
-
+파이썬3라고 입력한 후에는 프롬프트가 '>>>'로 바뀔꺼에요. 그건 우리가 이제 파이썬언어에 해당하는 명령만을 사용할 수 있다는 걸 의미해요.
+그렇다고 '>>>'를 직접 입력하실 필요는 없어요. - 파이썬이 여러분을 위해서 대신 할 겁니다.
+어느때던지 파이썬 콘솔에서 빠져나가고 싶으면, 그냥  `exit()` 를 입력하거나 윈도우의 경우에는 단축키 `Ctrl + Z` 그리고 맥/리눅스의 경우에는  `Ctrl + D` 를 입력하면  더 이상  `>>>` 가 나타나지 않을 거에요.
+그렇지만 지금은 파이썬 콘솔 밖으로 나갈 필요가 없습니다. 우리는 더 배우길 원하니까요. 약간 단순한 걸 시작해볼까요
+예를 들어, 덧셈같은거요. '2+3' 을 입력하고 엔터를 치세요.
     >>> 2 + 3
     5
 
-Nice! See how the answer popped out? Python knows math! You could try other commands like:
+멋져욧! 답이 어떻게 출력되었는지 봤나요? 파이썬이 수학을 알다니! 다른 비슷한 것들도 해보죠:
 - `4 * 5`
 - `5 - 1`
 - `40 / 2`
 
-Have fun with this for a little while and then get back here :).
-
-As you can see, Python is a great calculator. If you're wondering what else you can do...
-
+방금 실습한 몇 가지 예제들이 즐거우셨길 바래요. 자 그리고 다시 원래 문맥으로 돌아와서 ^^;
+방금 보셨듯이, 파이썬은 엄청난 계산기에요.  음 아직도 못 믿으시겠다면 무엇이든지 더 해보세요.
 ## Strings
 
-How about your name? Type your first name in quotes like this:
+이름이 어떻게 되세요?  쌍따옴표로 이름을 감싸고 입력해보세요:
 
     >>> "Ola"
     'Ola'
 
-You've now created your first string! It's a set of characters that can be processed by a computer. The string must always begin and end with the same character. This may be single (`'`) or double (`"`) quotes - they tell Python that what's inside of them is a string.
+방금 당신은 첫번째 문자열을 만드셨습니다.문자열은 컴퓨터가 처리할 수 있는 문자의 집합같은 거에요. 문자열은 반드시 처음 그리고 끝이 같은 문자로 끝나야합니다. 그래서 ' 홑따옴표 또는 " 쌍따옴표는 파이썬에게 그 내부에 문자열이 있음을 알려줘요.
 
-Strings can be strung together. Try this:
+
+문자열끼리는 서로 연결할 수 있어요 예문처럼 해보세요:
 
     >>> "Hi there " + "Ola"
     'Hi there Ola'
 
-You can also multiply strings with a number:
+또한 아래와 같이 문자열 곱하기를 이용해 반복해서 나타낼 수 있어요:
 
     >>> "Ola" * 3
     'OlaOlaOla'
 
-If you need to put an apostrophe inside your string, you have two ways to do it.
+만약에 문자열안에 아스트로피(')를 사용하고 싶은 경우에는, 두가지 방법을 사용할 수 있어요.
 
-Using double quotes:
-
+더블쿼터(")를 사용하기:
     >>> "Runnin' down the hill"
     "Runnin' down the hill"
 
-or escaping apostrophe with a backslash (`\`):
+또는 백슬러시('\')와 함께 사용해서 표시할 수 있습니다.
 
     >>> 'Runnin\' down the hill'
     "Runnin' down the hill"
 
-Nice, huh? To see your name in uppercase letters, simply type:
+좋아요, 그쵸? 당신의 이름을 대문자로 표현하려면 아래와 같이 하면 됩니다:
 
     >>> "Ola".upper()
     'OLA'
 
-You just used the `upper` __function__ on your string! A function (like `upper()`) is a set of instructions that Python has to perform on a given object (`"Ola"`) once you call it.
-
-If you want to know the number of letters contained in your name, there is a function for that too!
-
+그저 'upper' __function__ 을 문자열에 사용하면 되요! ('upper()')와 같은 함수는 파이썬에서 호출할 때 문자열을 받아서 동작합니다.
+만약 이름의 전체 길이가  몇 글자로 되어 있는지 알고 싶은 경우에도 함수를 사용하면 됩니다.
     >>> len("Ola")
     3
 
-Wonder why sometimes you call functions with a `.` at the end of a string (like `"Ola".upper()`) and sometimes you first call a function and place the string in parentheses? Well, in some cases, functions belong to objects, like `upper()`, which can only be performed on strings. In this case, we call the function a __method__. Other times, functions don't belong to anything specific and can be used on different types of objects, just like `len()`. That's why we're giving `"Ola"` as a parameter to the `len` function.
+왜 함수를 호출할 때 ('"ola".upper()')처럼 문자열의 마지막에  '.' 를 붙여서 사용하는지 그리고 문자열을 삽입해서 사용하는 지 의문이 생길 수 있습니다. 음. 그건 각각의 상황에 따라서 조금 다른데요.  ('"Ola".upper()') 처럼 사용할 때는 함수가 "Ola"라는 스트링오브젝트에 속하게 되어 동작합니다. upper()는 문자열에만 동작가능한 함수에요. 그런데 아무런 오브젝트에 속하지 않은 채로 __method__ 로서 함수를 호출할 때가 있죠. 'len()' 처럼요.  그래서 이 경우에는 len 함수에 '"Ola"'라는 인자를 받아서 사용합니다.
 
-### Summary
+### 요약
 
+좋습니다. 문자열에 대해서는 충분히 학습한 것 같네요. 
 OK, enough of strings. So far you've learned about:
 
 - __the prompt__ - typing commands (code) into the Python prompt results in answers in Python
